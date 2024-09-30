@@ -11,3 +11,4 @@ class Engenheiro(Funcionario):
 
     def __str__(self) -> str:
         return f"\n{super().__str__()}\nCREA: {self.crea} "
+    

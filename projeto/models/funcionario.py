@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from models.endereco import Endereco
+
 class Funcionario(ABC):
     def __init__(self,nome: str, telefone: str, email: str, endereco: Endereco, salario_final: float) -> None:
         self.nome = nome
