@@ -6,5 +6,8 @@ class Medico(Funcionario):
         super().__init__(nome, telefone, email, endereco, salario_final)
         self.crm = crm
 
+    def calcular_salario(self, salario_final):
+        return super().calcular_salario(salario_final)
+
     def __str__(self) -> str:
         return f"\n{super().__str__()}\nCRM: {self.crm}"

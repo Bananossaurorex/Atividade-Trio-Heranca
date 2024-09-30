@@ -6,5 +6,8 @@ class Engenheiro(Funcionario):
         super().__init__(nome, telefone, email, endereco, salario_final)
         self.crea = crea
 
+    def calcular_salario(self, salario_final):
+        return super().calcular_salario(salario_final)
+
     def __str__(self) -> str:
         return f"\n{super().__str__()}\nCREA: {self.crea} "
