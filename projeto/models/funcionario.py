@@ -8,4 +8,15 @@ class Funcionario(ABC):
         self.endereco = endereco
         self.salario_final = salario_final
 
-    def
+    @abstractmethod
+    def calcular_salario(self,salario_final):
+        pass
+
+    def __str__(self) -> str:
+        return (
+            (f"\nNome: {self.nome}")
+            (f"\nTelefone: {self.telefone}")
+            (f"\nEmail: {self.email}")
+            (f"\nSalario: {self.salario_final}")
+            (f"\n{self.endereco}")
+        )
