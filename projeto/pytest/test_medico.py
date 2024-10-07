@@ -16,7 +16,7 @@ def test_alterar_nome(criar_medico):
     criar_medico.nome = "Claudio"
     assert criar_medico.nome == "Claudio" 
 
-def test_nome_vazio_invalido()
+def test_nome_vazio_invalido():
         with pytest.raises(TypeError, match= "O nome não pode ser vazio"):
              Medico("","987654321","brenosalvavidas@gmail.com",
                   Endereco("Rua da computação","177","Proximo a rua dos pasteis",2224401,"Salvador"),
