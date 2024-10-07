@@ -1,8 +1,10 @@
 from abc import ABC, abstractmethod
 from ..models.endereco import Endereco
+from ..models.enum.sexo import Sexo
+
 
 class Funcionario(ABC):
-    def __init__(self,nome: str, telefone: str, email: str, endereco: Endereco, salario_final: float) -> None:
+    def __init__(self,nome: str, telefone: str, email: str, endereco: Endereco, salario_final: float,sexo:Sexo) -> None:
         self.nome = self._nome_vazio(nome)
         self.telefone = telefone
         self.email = email
