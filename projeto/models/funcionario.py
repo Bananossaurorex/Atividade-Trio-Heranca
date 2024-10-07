@@ -7,7 +7,7 @@ class Funcionario(ABC):
     def __init__(self,nome: str, telefone: str, email: str, endereco: Endereco, salario_final: float,sexo:Sexo) -> None:
         self.nome = self._nome_vazio(nome)
         self.telefone = telefone
-        self.email = email
+        self.email = self._email_invalido(email)
         self.endereco = endereco
         self.salario_final = salario_final
         self.sexo = sexo
@@ -16,6 +16,11 @@ class Funcionario(ABC):
     def calcular_salario(self,salario_final):
         pass
 
+    def _email_invalido(self,email):
+        if "@" not in email:
+            raise TypeError("O email deve conter o @")
+        return email
+    
     def _nome_vazio(self,nome):
         if not nome.strip():
             raise TypeError("O nome não pode ser vazio")
