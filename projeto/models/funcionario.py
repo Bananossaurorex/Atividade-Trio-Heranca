@@ -18,7 +18,7 @@ class Funcionario(ABC):
 
     def _email_invalido(self,email):
         if "@" and "mail.com" not in email:
-            raise TypeError("O email deve conter o @")
+            raise TypeError("O email deve conter o @ e mail.com")
         return email
     
     def _nome_vazio(self,nome):
