@@ -15,7 +15,11 @@ class Funcionario(ABC):
 
     def __str__(self) -> str:
         return (
+<<<<<<< HEAD
             f"\nNome: {self.nome}"
+=======
+            f"Nome: {self.nome}"
+>>>>>>> 1483cb7 (updatessss)
             f"\nTelefone: {self.telefone}"
             f"\nEmail: {self.email}"
             f"\nSalario: {self.salario_final}"
