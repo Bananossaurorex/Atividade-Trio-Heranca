@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 from ..models.funcionario import Funcionario
 from ..models.endereco import Endereco
-=======
-from models.funcionario import Funcionario
-from models.endereco import Endereco
-from projeto.models.enum.sexo import Sexo
->>>>>>> 1dd4821 (up)
 
 class Medico(Funcionario):
     def __init__(self, nome: str, telefone: str, email: str, endereco: Endereco, salario_final: float, sexo: Sexo, crm: str) -> None:
