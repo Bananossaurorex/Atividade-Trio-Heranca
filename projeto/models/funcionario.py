@@ -3,7 +3,7 @@ from ..models.endereco import Endereco
 
 class Funcionario(ABC):
     def __init__(self,nome: str, telefone: str, email: str, endereco: Endereco, salario_final: float) -> None:
-        self.nome = nome
+        self.nome = self._nome_vazio(nome)
         self.telefone = telefone
         self.email = email
         self.endereco = endereco
@@ -12,6 +12,11 @@ class Funcionario(ABC):
     @abstractmethod
     def calcular_salario(self,salario_final):
         pass
+
+    def _nome_vazio(self,nome):
+        if not nome.strip():
+            raise TypeError("O nome não pode ser vazio")
+        return nome
 
     def __str__(self) -> str:
         return (
