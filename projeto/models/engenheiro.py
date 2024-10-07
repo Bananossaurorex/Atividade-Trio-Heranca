@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 from ..models.funcionario import Funcionario
 from ..models.endereco import Endereco
 from ..models.enum.sexo import Sexo
+=======
+from models.funcionario import Funcionario
+from models.endereco import Endereco
+from models.enum.sexo import Sexo
+>>>>>>> 7e4913d (up)
 
 class Engenheiro(Funcionario):
     def __init__(self, nome: str, telefone: str, email: str, endereco: Endereco, salario_final: float, sexo: Sexo, crea: str) -> None:

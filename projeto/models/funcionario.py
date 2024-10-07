@@ -6,6 +6,15 @@ from ..models.enum.sexo import Sexo
 class Funcionario(ABC):
     def __init__(self,nome: str, telefone: str, email: str, endereco: Endereco, salario_final: float,sexo:Sexo) -> None:
         self.nome = self._nome_vazio(nome)
+<<<<<<< HEAD
+=======
+from models.endereco import Endereco
+from models.enum.sexo import Sexo
+
+class Funcionario(ABC):
+    def __init__(self,nome: str, telefone: str, email: str, endereco: Endereco, salario_final: float, sexo: Sexo) -> None:
+        self.nome = nome
+>>>>>>> 7e4913d (up)
         self.telefone = telefone
         self.email = self._email_invalido(email)
         self.endereco = endereco
@@ -28,7 +37,11 @@ class Funcionario(ABC):
 
     def __str__(self) -> str:
         return (
+<<<<<<< HEAD
             f"Nome: {self.nome}"
+=======
+            f"\nNome: {self.nome}"
+>>>>>>> 7e4913d (up)
             f"\nTelefone: {self.telefone}"
             f"\nEmail: {self.email}"
             f"\nSalario: {self.salario_final}"
