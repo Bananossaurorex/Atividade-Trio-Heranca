@@ -22,3 +22,9 @@ def test_nome_vazio_invalido():
             Medico("","987654321","brenosalvavidas@gmail.com",
                   Endereco("Rua da computação","177","Proximo a rua dos pasteis",2224401,"Salvador",UnidadeFederativa.BAHIA),
                   2000.01,Sexo.FEMININO,"6554632")
+
+def test_email_invalido_():
+        with pytest.raises(TypeError, match= "O email deve conter o @ e o mail.com"):
+             Medico("Breno","987654321","brenosalvavidasgmail.co",
+                  Endereco("Rua da computação","177","Proximo a rua dos pasteis",2224401,"Salvador",UnidadeFederativa.BAHIA),
+                  2000.01,Sexo.FEMININO,"6554632")
