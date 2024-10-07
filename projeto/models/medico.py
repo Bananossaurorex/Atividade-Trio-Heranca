@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 from ..models.funcionario import Funcionario
 from ..models.endereco import Endereco
+=======
+from models.funcionario import Funcionario
+from models.endereco import Endereco
+from projeto.models.enum.sexo import Sexo
+>>>>>>> 1dd4821 (up)
 
 class Medico(Funcionario):
-    def __init__(self, nome: str, telefone: str, email: str, endereco: Endereco, salario_final: float, crm: str) -> None:
-        super().__init__(nome, telefone, email, endereco, salario_final)
+    def __init__(self, nome: str, telefone: str, email: str, endereco: Endereco, salario_final: float, sexo: Sexo, crm: str) -> None:
+        super().__init__(nome, telefone, email, endereco, salario_final, sexo)
         self.crm = crm
 
     def calcular_salario(self, salario_final):
